@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Mon Portfolio</title>
+
+    <!-- Ajouter avant la fermeture du body -->
+    <script>
+        // Attendre que le DOM soit chargé
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sélectionner tous les boutons modaux
+            const modalBtns = document.querySelectorAll('.modal-btn');
+            const closeBtns = document.querySelectorAll('.close-modal');
+            const modals = document.querySelectorAll('.modal');
+
+            // Ouvrir la modale correspondante lorsqu'un bouton est cliqué
+            modalBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    const projectId = this.getAttribute('data-project-id');
+                    const modal = document.getElementById('modal-' + projectId);
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Empêcher le défilement du body
+                });
+            });
+
+            // Fermer la modale lorsque le bouton X est cliqué
+            closeBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    const modal = this.closest('.modal');
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto'; // Réactiver le défilement du body
+                });
+            });
+
+            // Fermer la modale lorsque l'utilisateur clique en dehors du contenu
+            window.addEventListener('click', function(e) {
+                modals.forEach(function(modal) {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto'; // Réactiver le défilement du body
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
 <!-- En-tête avec photo et nom -->
@@ -90,8 +130,7 @@
                         <span class="project-tag">JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" target="_blank">Voir le Projet</a>
-                        <a href="https://github.com/Vins78470/SAE-S3" target="_blank">Code Source</a>
+                        <button class="modal-btn" data-project-id="projet1">Voir les détails</button>
                     </div>
                 </div>
             </div>
@@ -107,8 +146,7 @@
                         <span class="project-tag">MongoDB</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" target="_blank">Voir le Projet</a>
-                        <a href="#" target="_blank">Code Source</a>
+                        <button class="modal-btn" data-project-id="projet2">Voir les détails</button>
                     </div>
                 </div>
             </div>
@@ -124,8 +162,7 @@
                         <span class="project-tag">MySQL</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" target="_blank">Voir le Projet</a>
-                        <a href="#" target="_blank">Code Source</a>
+                        <button class="modal-btn" data-project-id="projet3">Voir les détails</button>
                     </div>
                 </div>
             </div>
@@ -250,5 +287,97 @@
     </div>
     <p>&copy; 2025 Votre Nom. Tous droits réservés.</p>
 </footer>
+
+
+<!-- Ajouter avant la fermeture du body -->
+<!-- Modales des projets -->
+<div class="modals-container">
+    <!-- Modal Projet 1 -->
+    <div class="modal" id="modal-projet1">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Site Web avec module de calcul et base de donnée</h2>
+            <div class="modal-body">
+                <h3>Description détaillée</h3>
+                <p>Ce projet est un site web complet intégrant un module de calcul statistique basé sur la loi inverse-gaussienne. Il permet aux utilisateurs de réaliser des calculs complexes et de consulter l'historique de leurs résultats.</p>
+
+                <h3>Fonctionnalités principales</h3>
+                <ul>
+                    <li>Système d'authentification sécurisé pour les utilisateurs</li>
+                    <li>Interface de calcul intuitive pour la loi inverse-gaussienne</li>
+                    <li>Visualisation graphique des résultats</li>
+                    <li>Historique des calculs sauvegardés dans une base de données</li>
+                    <li>Interface responsive adaptable à tous les appareils</li>
+                </ul>
+
+                <h3>Technologies utilisées</h3>
+                <p>Ce projet a été développé en utilisant HTML, CSS et JavaScript pour le front-end, PHP pour le back-end, et MySQL pour la gestion de la base de données.</p>
+
+                <h3>Défis et solutions</h3>
+                <p>Le principal défi de ce projet était l'implémentation des calculs complexes de la loi inverse-gaussienne tout en gardant une interface utilisateur simple. J'ai résolu ce problème en séparant clairement la logique de calcul du reste de l'application et en créant une couche d'abstraction pour simplifier l'utilisation.</p>
+
+                <h3>Ce que j'ai appris</h3>
+                <p>Ce projet m'a permis d'approfondir mes connaissances en statistiques et en développement web, particulièrement dans la gestion des sessions utilisateurs et l'optimisation des requêtes SQL.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Projet 2 -->
+    <div class="modal" id="modal-projet2">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Nom du Projet 2</h2>
+            <div class="modal-body">
+                <h3>Description détaillée</h3>
+                <p>Description détaillée du projet 2.</p>
+
+                <h3>Fonctionnalités principales</h3>
+                <ul>
+                    <li>Fonctionnalité 1</li>
+                    <li>Fonctionnalité 2</li>
+                    <li>Fonctionnalité 3</li>
+                </ul>
+
+                <h3>Technologies utilisées</h3>
+                <p>React, Node.js, MongoDB</p>
+
+                <h3>Défis et solutions</h3>
+                <p>Description des défis et des solutions.</p>
+
+                <h3>Ce que j'ai appris</h3>
+                <p>Description de ce que vous avez appris.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Projet 3 -->
+    <div class="modal" id="modal-projet3">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Nom du Projet 3</h2>
+            <div class="modal-body">
+                <h3>Description détaillée</h3>
+                <p>Description détaillée du projet 3.</p>
+
+                <h3>Fonctionnalités principales</h3>
+                <ul>
+                    <li>Fonctionnalité 1</li>
+                    <li>Fonctionnalité 2</li>
+                    <li>Fonctionnalité 3</li>
+                </ul>
+
+                <h3>Technologies utilisées</h3>
+                <p>WordPress, PHP, MySQL</p>
+
+                <h3>Défis et solutions</h3>
+                <p>Description des défis et des solutions.</p>
+
+                <h3>Ce que j'ai appris</h3>
+                <p>Description de ce que vous avez appris.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
