@@ -6,9 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Mon Portfolio</title>
 
-    <!-- Ajouter avant la fermeture du body -->
     <script>
-        // Attendre que le DOM soit chargé
         document.addEventListener('DOMContentLoaded', function() {
             // Sélectionner tous les boutons modaux
             const modalBtns = document.querySelectorAll('.modal-btn');
@@ -84,7 +82,7 @@
             </div>
             <div class="about-text">
                 <h3>Mes Compétences</h3>
-                <p>Je maîtrise plusieurs langages :</p>
+                <p>Je maîtrise plusieurs langages et technologies :</p>
                 <div class="skills">
                     <span class="skill-tag">HTML</span>
                     <span class="skill-tag">CSS</span>
@@ -118,10 +116,10 @@
                 <div class="project-info">
                     <h3>Site Web avec module de calcul et base de donnée</h3>
                     <p>Les Fonctionnalités :</p>
-                    <p>- Calculer des probabilités basées sur la loi inverse-gaussienne.</p>
-                    <p>- Stocker les résultats dans un historique pour une consultation ultérieure.</p>
-                    <p>- Visualiser graphiquement la courbe de la loi inverse-gaussienne.</p>
-                    <p>De plus, une base de donnée gère l'historique de calcul ainsi que les logins des utilisateurs afin qu'ils puissent se connecter au site.</p>
+                    <p>- Calculer des probabilités</p>
+                    <p>- Stocker les résultats dans un historique</p>
+                    <p>- Visualiser graphiquement la courbe</p>
+                    <p>- Gestion d'une base de donnée</p>
                     <div class="project-tags">
                         <span class="project-tag">HTML</span>
                         <span class="project-tag">CSS</span>
@@ -136,14 +134,13 @@
             </div>
             <!-- Projet 2 -->
             <div class="project-card">
-                <img src="/api/placeholder/600/400" alt="Projet 2" class="project-image">
+                <img src="img/ApprentiOrdonnateur.png" alt="Projet 2" class="project-image">
                 <div class="project-info">
-                    <h3>Nom du Projet 2</h3>
-                    <p>Description du projet. Expliquez ici ce que vous avez réalisé, les technologies utilisées et les défis relevés.</p>
+                    <h3>Apprenti Ordonnateur</h3>
+                    <p>Petit jeu en 2D en Java, avec interface graphique. Le but étant d'aligner des cristaux selon leur couleur dans un temple.</p>
                     <div class="project-tags">
-                        <span class="project-tag">React</span>
-                        <span class="project-tag">Node.js</span>
-                        <span class="project-tag">MongoDB</span>
+                        <span class="project-tag">Java</span>
+                        <span class="project-tag">JavaFX</span>
                     </div>
                     <div class="project-links">
                         <button class="modal-btn" data-project-id="projet2">Voir les détails</button>
@@ -260,17 +257,17 @@
             <div class="contact-method">
                 <i>📧</i>
                 <h3>Email</h3>
-                <p>votre.email@exemple.com</p>
+                <p>nathan.lyonnet@gmail.com</p>
             </div>
             <div class="contact-method">
                 <i>📱</i>
                 <h3>Téléphone</h3>
-                <p>+33 6 12 34 56 78</p>
+                <p>+33 7 82 22 34 36</p>
             </div>
             <div class="contact-method">
                 <i>📍</i>
                 <h3>Adresse</h3>
-                <p>Votre Ville, France</p>
+                <p>ELANCOURT, France</p>
             </div>
         </div>
     </div>
@@ -285,11 +282,10 @@
         <a href="#" class="social-link" target="_blank">LI</a>
         <a href="#" class="social-link" target="_blank">GH</a>
     </div>
-    <p>&copy; 2025 Votre Nom. Tous droits réservés.</p>
+    <p>&copy; 2025 Lyonnet Nathan. Tous droits réservés.</p>
 </footer>
 
 
-<!-- Ajouter avant la fermeture du body -->
 <!-- Modales des projets -->
 <div class="modals-container">
     <!-- Modal Projet 1 -->
@@ -299,7 +295,8 @@
             <h2>Site Web avec module de calcul et base de donnée</h2>
             <div class="modal-body">
                 <h3>Description détaillée</h3>
-                <p>Ce projet est un site web complet intégrant un module de calcul statistique basé sur la loi inverse-gaussienne. Il permet aux utilisateurs de réaliser des calculs complexes et de consulter l'historique de leurs résultats.</p>
+                <p>Ce projet est un site web complet intégrant un module de calcul statistique basé sur la loi inverse-gaussienne.
+                     Il permet aux utilisateurs de réaliser des calculs complexes et de consulter l'historique de leurs résultats.</p>
 
                 <h3>Fonctionnalités principales</h3>
                 <ul>
@@ -314,10 +311,14 @@
                 <p>Ce projet a été développé en utilisant HTML, CSS et JavaScript pour le front-end, PHP pour le back-end, et MySQL pour la gestion de la base de données.</p>
 
                 <h3>Défis et solutions</h3>
-                <p>Le principal défi de ce projet était l'implémentation des calculs complexes de la loi inverse-gaussienne tout en gardant une interface utilisateur simple. J'ai résolu ce problème en séparant clairement la logique de calcul du reste de l'application et en créant une couche d'abstraction pour simplifier l'utilisation.</p>
+                <p>Le principal défi de ce projet était l'implémentation des calculs complexes de la loi inverse-gaussienne
+                     tout en gardant une interface utilisateur simple. Ce problème a été résolu en séparant clairement la logique
+                    de calcul du reste de l'application et en créant une couche d'abstraction pour simplifier l'utilisation.</p>
 
                 <h3>Ce que j'ai appris</h3>
-                <p>Ce projet m'a permis d'approfondir mes connaissances en statistiques et en développement web, particulièrement dans la gestion des sessions utilisateurs et l'optimisation des requêtes SQL.</p>
+                <p>Ce projet m'a permis d'approfondir mes connaissances en statistiques et en développement web,
+                    particulièrement dans la gestion des sessions utilisateurs, la gestion de la relation entre site et base de donnée,
+                    et l'optimisation des requêtes SQL.</p>
             </div>
         </div>
     </div>
