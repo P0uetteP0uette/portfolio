@@ -159,7 +159,7 @@ section {
 
 /* Projets */
 #projects {
-    background-color: var(--light-color);
+    background-color: white;
 }
 
 .projects-grid {
@@ -233,7 +233,7 @@ section {
 
 /* Expérience */
 #experience {
-    background-color: white;
+    background-color: var(--light-color);
 }
 
 .timeline {
@@ -246,7 +246,7 @@ section {
     content: '';
     position: absolute;
     width: 4px;
-    background-color: var(--light-color);
+    background-color: white;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -268,7 +268,7 @@ section {
 
 .timeline-item-content {
     padding: 1.5rem;
-    background-color: var(--light-color);
+    background-color: white;
     border-radius: 8px;
     position: relative;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
@@ -296,7 +296,7 @@ section {
     margin-bottom: 0.5rem;
 }
 
-/* Formation */
+/* ambitions / passions */
 #education {
     background-color: var(--light-color);
 }
